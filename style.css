@@ -321,20 +321,18 @@ h2 {
 .social-media i {
     cursor: pointer;
 }
+
 #facebook-redirect:hover {
     background: -webkit-linear-gradient(#3b5998, #3b5998);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
 }
 #twitter-redirect:hover {
     background: -webkit-linear-gradient(#00acee, #00acee);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
-#instagram-redirect:hover{
+#instagram-redirect:hover {
     background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+}
+#facebook-redirect:hover, #twitter-redirect:hover, #instagram-redirect:hover {
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
