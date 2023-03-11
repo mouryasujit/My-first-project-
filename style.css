@@ -62,7 +62,7 @@ body {
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/images5.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/main-cover.jpg');
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,6 +78,7 @@ body {
 a {
     font-size: 1.6rem;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
 }
 
 h1,
@@ -96,38 +97,53 @@ h1 {
     color: white;
     font-size: 3.5rem;
     padding: 1.5rem;
-
-
     float: left;
     clear: both;
 }
-
+#logo i {
+    cursor: pointer;
+}
 .nav {
     display: inline;
     float: right;
 }
-
 .nav a {
     color: white;
     padding: 2rem;
     margin: 1.5rem;
     float: right;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
-.navi ::after {
+.nav ::after {
     display: block;
     clear: both;
     overflow: auto;
 }
 
-a:hover {
+.nav a:hover {
     font-size: large;
-    text-decoration: none;
     color: #e63946;
-
     padding: 1.3rem;
+    margin: 1.6rem;
+}
+/* .u {
+    height: fit-content;
+} */
+/* .u li {
+    margin: 0 0.2rem;
+} */
 
+a:hover {
+    font-size: 1.725rem;
+    /* text-decoration: none; */
+    color: #e63946;
+    padding: 1.3rem;
+}
+
+.nav .active {
+    color: #e63946;
 }
 
 /* header content ############################################ */
@@ -153,7 +169,6 @@ a:hover {
 }
 
 .heading {
-
     font-weight: 700;
 }
 
@@ -162,7 +177,6 @@ p {
 }
 
 .header-content {
-
     position: absolute;
     text-align: center;
     top: 50%;
@@ -173,12 +187,9 @@ p {
 }
 
 /* showcase section styling########################################### */
-.fg {
-    font: size 20px;
-}
-
-.gg {
-    font-size: 1.2rem;
+.gg, .fg {
+    text-align: justify;
+    font-size: 1rem;
 }
 
 .showcase {
@@ -188,8 +199,6 @@ p {
 
 .row {
     height: 350px;
-
-
 }
 
 .rew1 {
@@ -224,7 +233,7 @@ p {
 }
 
 .rew1 .img-box {
-    background-image: url(images/IMAGE.jpg);
+    background-image: url(images/thailand.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -234,7 +243,7 @@ h2 {
 }
 
 .row2 .img-box {
-    background-image: url(images/images3.jpg);
+    background-image: url(images/califonia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -257,30 +266,33 @@ h2 {
     clear: both;
 }
 
-.box-wrapper {
-    box-shadow: 5px 5px 20px 0px #2632384d;
-    overflow: auto;
-}
-
 .features {
     padding: 10rem 0;
+}
+
+.box-wrapper {
+    box-shadow: 5px 5px 20px 0px #2632384d;
+    overflow: hidden;
+    background-color: #DDDDDD;
 }
 
 .box {
     width: 33.33333%;
     float: left;
-
-
+    height: 100%;
     padding: 2rem;
     text-align: center;
 }
 
-.box1,
-.box3 {
+.box p {
+    text-align: center;
+    height: 7rem;
+}
+
+.box1, .box3 {
     background-color: #263238;
     color: white;
     padding: 3rem;
-
 }
 
 .box2 {
@@ -300,10 +312,30 @@ h2 {
     padding: 2rem;
     text-align: center;
 }
-
+.media-box p {
+    user-select: none;
+}
 .social-media {
     margin: 1.4rem;
+}
+.social-media i {
+    cursor: pointer;
+}
 
+#facebook-redirect:hover {
+    background: -webkit-linear-gradient(#3b5998, #3b5998);
+    
+}
+#twitter-redirect:hover {
+    background: -webkit-linear-gradient(#00acee, #00acee);
+}
+#instagram-redirect:hover {
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+}
+#facebook-redirect:hover, #twitter-redirect:hover, #instagram-redirect:hover {
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .fa-brands {
@@ -319,6 +351,10 @@ h2 {
 .ig-heading {
     padding: 2rem -1.9rem 2rem 0rem;
 }
+.about {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
 .about-heading {
     border-bottom: 6px solid #e63946;
@@ -326,21 +362,28 @@ h2 {
 }
 
 .lorm {
-    text-transform: lowercase;
-    font-size: 1.5rem;
-    color: gray;
+    text-transform: capitalize;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1.625rem;
+    color: black;
+
+    margin: 1rem 0;
 }
 
 .list-style {
     padding: 2rem;
+}
 
+.list-inline1, .list-inline2 {
+    display: flex;
+    justify-content: center;
 }
 
 .list-inline1 {
     float: left;
     width: 50%;
     font-size: 1.5rem;
-    text-align: center;
 }
 
 .list-inline2 {
@@ -452,8 +495,9 @@ h2 {
     float: left;
     font-size: 1.5rem;
     margin: 2rem 0.5rem 0rem 0.7rem;
-    text-transform: lowercase;
-    font-weight: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    user-select: none;
 }
 
 .button {
@@ -474,6 +518,7 @@ h2 {
     overflow-y: visible;
     box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.289);
 }
+
 /* ##################################################contact styling##################################### */
 .contact-form{
     padding: 3rem 0rem;
@@ -487,7 +532,6 @@ h2 {
     width: 87rem;
     margin: 0 auto;
     margin-top: -2rem;
-     
 }
 .compant-name{
     
@@ -498,7 +542,6 @@ h2 {
     background-color: #ffff;
     width: 45%;
     float: right;
-     
 }
 .compant-name{
     background-color: chartreuse;
@@ -537,19 +580,17 @@ h2 {
     padding-right: 0.7rem;
 }
 .compant-name img{
-     
     height: 30rem;
     width: 40rem;
     border: 1px solid red;
-   object-position: right;
+    object-position: right; 
 }
 /* ########################################form Styling####################################################### */
 .form{
     background-color: chartreuse;
-     font-size: 1.6rem;
+    font-size: 1.6rem;
     padding: 1rem;
     height: 55rem;
-   
 }
 .form h2{
     font-size: 3rem;
@@ -588,30 +629,28 @@ h2 {
     font-size: larger;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.277);
 }
-@media(max-width:500px){
+
+
+@media (max-width:500px) {
     html {
     
         font-size: 40%;
     }
-     .nav {
+    .nav {
         float: none;
-         padding: 0.1rem;
-         width: 100%;
+        padding: 0.1rem;
+        width: 100%;
         text-align: center;
         justify-content: center;
-       
-         
     }
     #logo{
         float: none;
         display: block;
         text-align: center;
-         
     }
     #button{
         border: 1px solid #e63946;
         padding: 1rem;
-
     }
     .row{
         height:auto;
@@ -640,9 +679,9 @@ h2 {
         font-weight: 700;
     }
     .foot{
-         height:11rem;
-         text-align: center;
-         padding-top: 2rem;
+        height:11rem;
+        text-align: center;
+        padding-top: 2rem;
     }
     .foot .foot-text,
     .foot .button {
@@ -651,7 +690,6 @@ h2 {
         width: 100%;
         text-align: center;
         padding: auto;
-
     }
     .foot-text{
         padding: 0rem;
@@ -664,15 +702,12 @@ h2 {
     .form-wrapper{
         width: 43.5rem;
     }
-    .form-wrapper .compant-name,
+    .form-wrapper .compant-name
     {
-         
         width:43.5rem;
-        margin-bottom:5rem;
-         
+        margin-bottom: 5rem;
     }
     .form-wrapper .form{
-         
         width:100%;
         margin-top:5rem;
     }
@@ -686,7 +721,6 @@ h2 {
         color: #e63946;
         font-size: 1rem;
     }
-
 }
 @media(min-width: 501px) and (max-width:768px){
     html{
@@ -697,18 +731,15 @@ h2 {
     }
     .nav {
         float: none;
-         padding: 0.1rem;
-         width: 100%;
-        text-align: center;
-        justify-content: center;
-       
-         
+        padding: 0.1rem;
+        width: 100%;
+    text-align: center;
+    justify-content: center;
     }
     #logo{
         float: none;
         display: block;
         text-align: center;
-         
     }
     #button{
         border: 1px solid #e63946;
@@ -742,9 +773,9 @@ h2 {
         font-weight: 700;
     }
     .foot{
-         height:11rem;
-         text-align: center;
-         padding-top: 2rem;
+        height:11rem;
+        text-align: center;
+        padding-top: 2rem;
     }
     .foot .foot-text,
     .foot .button {
@@ -766,15 +797,12 @@ h2 {
     .form-wrapper{
         width: 43.5rem;
     }
-    .form-wrapper .compant-name,
+    .form-wrapper .compant-name
     {
-         
         width:43.5rem;
         margin-bottom:5rem;
-         
     }
     .form-wrapper .form{
-         
         width:100%;
         margin-top:5rem;
     }
@@ -783,7 +811,6 @@ h2 {
         display:inline;
         padding: 1rem;
         text-align:center;
-         
     }
     .nav a{
         float: none;
@@ -797,8 +824,6 @@ h2 {
         height: 100%;
         font-size:2rem;
     }
-
-
 }
 
 
