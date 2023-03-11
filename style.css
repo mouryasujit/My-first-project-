@@ -116,7 +116,7 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
-.navi ::after {
+.nav ::after {
     display: block;
     clear: both;
     overflow: auto;
@@ -124,11 +124,16 @@ h1 {
 
 .nav a:hover {
     font-size: large;
-    /* text-decoration: none; */
     color: #e63946;
     padding: 1.3rem;
-    margin-top: 1.625rem;
+    margin: 1.6rem;
 }
+/* .u {
+    height: fit-content;
+} */
+/* .u li {
+    margin: 0 0.2rem;
+} */
 
 a:hover {
     font-size: 1.725rem;
@@ -137,6 +142,9 @@ a:hover {
     padding: 1.3rem;
 }
 
+.nav .active {
+    color: #e63946;
+}
 
 /* header content ############################################ */
 .container {
@@ -304,12 +312,32 @@ h2 {
     padding: 2rem;
     text-align: center;
 }
-
+.media-box p {
+    user-select: none;
+}
 .social-media {
     margin: 1.4rem;
 }
 .social-media i {
     cursor: pointer;
+}
+#facebook-redirect:hover {
+    background: -webkit-linear-gradient(#3b5998, #3b5998);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#twitter-redirect:hover {
+    background: -webkit-linear-gradient(#00acee, #00acee);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#instagram-redirect:hover{
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .fa-brands {
